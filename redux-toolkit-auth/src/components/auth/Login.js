@@ -4,8 +4,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { Field, Form, Formik, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-import { login } from "../slices/auth";
-import { clearMessage } from "../slices/message";
+import { login } from "../../app/store/auth";
+import { clearMessage } from "../../app/store/message";
 
 const Login = () => {
     let navigate = useNavigate();

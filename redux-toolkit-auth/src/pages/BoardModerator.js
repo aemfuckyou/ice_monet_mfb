@@ -1,33 +1,34 @@
 import React, { useState, useEffect } from "react";
-import UserService from "../services/user.service";
+import UserService from "../app/services/user.service";
 
-const BoardAdmin = () => {
+const BoardModerator = () => {
     const [content, setContent] = useState("");
 
     useEffect(() => {
-        UserService.getAdminBoard().then(
+        UserService.getModeratorBoard().then(
             (response) => {
                 setContent(response.data);
             },
             (error) => {
-                const _content = (
-                    error.response &&
-                        error.response.data &&
-                        error.response.data.message
-                ) ||
+                const _content =(
+                error.response &&
+                    error.response.data &&
+                    error.response.data.message) ||
                     error.message ||
                     error.toString();
 
-                setContent(content);
+                setContent(_content);
             }
         );
-    }, []);
+    },[]);
     return (
         <div className="container">
             <header className="container bg-light p-5">
-                <h3>{content}</h3>
+                <h3>
+                    {content}
+                </h3>
             </header>
         </div>
     );
 };
-export default BoardAdmin;
+export default BoardModerator;
