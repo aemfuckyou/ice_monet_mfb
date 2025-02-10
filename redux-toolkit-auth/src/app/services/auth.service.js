@@ -17,6 +17,7 @@ const login = (username, password) => {
             password,
         })
         .then((response) => {
+            console.log("auth service login response:",response.data);
             if (response.data.username) {
                 localStorage.setItem("user", JSON.stringify(response.data));
             }
