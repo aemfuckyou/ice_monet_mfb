@@ -6,7 +6,7 @@ import {clearMessage} from "../app/store/message";
 import RegisterForm from "../components/auth/RegisterForm";
 
 const Register = () => {
-    const [sucess, setSucess] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const {message} = useSelector((state) => state.message);
     const dispatch = useDispatch();
@@ -18,14 +18,14 @@ const Register = () => {
     const handleRegister = (formValues) => {
         const {username, email, password} = formValues;
 
-        setSucess(false);
+        setSuccess(false);
 
         dispatch(register({username, email, password}))
             .unwrap()
             .then(() => {
-                setSucess(true);
+                setSuccess(true);
             }).catch(() => {
-                setSucess(false);
+                setSuccess(false);
         });
     };
     return (
@@ -38,7 +38,7 @@ const Register = () => {
                 <RegisterForm onSubmit={handleRegister} />
                 {message && (
                     <div className="form-group">
-                        <div className={sucess ? "alert alert-success" : "alert alert-danger"} role="alert">
+                        <div className={success ? "alert alert-success" : "alert alert-danger"} role="alert">
                             {message}
                         </div>
                     </div>

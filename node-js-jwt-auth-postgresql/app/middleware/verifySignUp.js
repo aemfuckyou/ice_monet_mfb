@@ -2,56 +2,46 @@ const db = require("../models");
 const ROLES = db.ROLES;
 const User = db.user;
 
-checkDuplicateUsernameOrEmail = (req, res, next) => {
-    // Username
-    User.findOne({
-        where: {
-            username: req.body.username
-        }
-    }).then(user => {
-        if (user) {
-            res.status(400).send({
-                message: "Failed! Username is already in use!"
-            });
-            return;
+const isDuplicateUser = async (req, res, next) => {
+    try {
+        const { username, email } = req.body;
+
+        if (!username || !email) {
+            return res.status(400).send({message: "Username and email are required"});
         }
 
-        // Email
-        User.findOne({
-            where: {
-                email: req.body.email
-            }
-        }).then(user => {
-            if (user) {
-                res.status(400).send({
-                    message: "Failed! Email is already in use!"
-                });
-                return;
-            }
-
-            next();
+        const userExists = await User.findOne({
+            where: { [db.Sequelize.Op.or]: [{username}, {email}] },
         });
-    });
+
+        if (userExists) {
+            return res.status(400).send({
+                message: `Failed! ${userExists.username === username ? "Username" : "Email"} is already in use!`,
+            });
+        }
+        next();
+    }catch(err) {
+        console.error("Error while trying to check isDuplicateUser", err);
+        res.status(500).send({message: "Server Error while trying to check duplicate user"});
+    }
 };
 
-checkRolesExisted = (req, res, next) => {
-    if (req.body.roles) {
-        for (let i = 0; i < req.body.roles.length; i++) {
-            if (!ROLES.includes(req.body.roles[i])) {
-                res.status(400).send({
-                    message: "Failed! Role does not exist = " + req.body.roles[i]
-                });
-                return;
-            }
-        }
-    }
+const validateRoles = (req, res, next) => {
+    if (!req.body.roles || req.body.roles.length === 0) return next(); // if there aren´t any roles
 
+    const invalidRoles = req.body.roles.filter(role => !ROLES.includes(role));
+
+    if (invalidRoles.length > 0) {
+        return res.status(400).send({
+            message: `Failed! Roles do not exist: ${invalidRoles.join(', ')}`,
+        });
+    }
     next();
 };
 
 const verifySignUp = {
-    checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
-    checkRolesExisted: checkRolesExisted
+    isDuplicateUser : isDuplicateUser,
+    validateRoles : validateRoles
 };
 
 module.exports = verifySignUp;

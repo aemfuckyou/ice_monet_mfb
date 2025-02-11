@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {Navigate, useNavigate} from 'react-router-dom';
 
+
 import {login} from "../app/store/auth";
 import {clearMessage} from "../app/store/message";
 import LoginForm from "../components/auth/LoginForm";
@@ -31,11 +32,12 @@ const handleLogin = (formValues) => {
             window.location.reload();
         })
         .catch(() => setLoading(false));
+
 };
 
+
 if (isLoggedIn) {
-    return
-        <Navigate to="/profile"/>;
+    return <Navigate to="/profile" />;
 
 }
 return (
@@ -43,10 +45,10 @@ return (
         <div className="card card-container">
             <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-            alt="profile image"
+            alt="profile avatar"
             className="profile-img-card"
             />
-            <LoginForm onSubmit={handleLogin} />
+            <LoginForm onSubmit={handleLogin} loading={loading} />
             <div className="form-group">
                 <div className="alert alert-danger" role="alert">
                     {message}

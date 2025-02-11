@@ -1,12 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
 
-import Login from "../../pages/Login";
 
-const load = Login.loading;
-
-const LoginForm = ({onSubmit}) => {
+const LoginForm = ({onSubmit, loading}) => {
     const initialValues = {
        username: "",
         password: "",
@@ -33,8 +30,8 @@ const LoginForm = ({onSubmit}) => {
                     <ErrorMessage name="password" component="div" className="invalid-feedback"/>
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={load}>
-                         {load && (<span className="spinner-border spinner-border-sm"></span>)}
+                    <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={loading}>
+                         {loading && (<span className="spinner-border spinner-border-sm"></span>)}
                         <span>Login</span>
                     </button>
                 </div>
