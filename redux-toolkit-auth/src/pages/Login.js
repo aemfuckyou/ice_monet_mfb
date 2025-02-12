@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {Navigate, useNavigate} from 'react-router-dom';
 
@@ -21,19 +21,18 @@ const Login = () => {
         dispatch(clearMessage());
     }, [dispatch]);
 
-const handleLogin = (formValues) => {
-    const { username, password } = formValues;
-    setLoading(true);
-
-    dispatch(login({ username, password }))
-        .unwrap()
-        .then(() => {
-            navigate("/profile");
-            window.location.reload();
-        })
-        .catch(() => setLoading(false));
-
-};
+    const handleLogin = useCallback(async (formValues) => {
+        const {username, password} = formValues;
+        try {
+            setLoading(true);
+            // @ts-ignore
+            await dispatch(login({username, password})).unwrap();
+            navigate("/profile", {replace: true});
+        } catch (error) {
+            console.error("Login-Fehler:", error);
+            setLoading(false);
+        }
+    }, [dispatch, navigate]);
 
 
 if (isLoggedIn) {

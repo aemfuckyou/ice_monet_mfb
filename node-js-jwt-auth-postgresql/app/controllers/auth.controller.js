@@ -43,7 +43,7 @@ exports.signup = async (req, res) => {
 
 exports.signin = async (req, res) => {
     try{
-        const user = await User.findOne({
+         const user = await User.findOne({
             where: {
                 username: req.body.username
             }
@@ -51,6 +51,8 @@ exports.signin = async (req, res) => {
         if (!user) {
             return res.status(401).send({message: "User does not exist"});
         }
+        console.log("User found:", user);
+
         // Check passwords
         const pwIsValid = await bcrypt.compare(req.body.password, user.password);
         if (!pwIsValid) {
@@ -66,7 +68,13 @@ exports.signin = async (req, res) => {
             expiresIn: 86400 // 24h
         });
         // Get roles
+        if (typeof user.getRoles !== "function") {
+            console.error("❌ user.getRoles ist nicht verfügbar!");
+            return res.status(500).send({ message: "Internal error: getRoles missing" });
+        }
+
         const roles = await user.getRoles();
+        console.log("Roles retrieved:", roles);
         const authorities = roles.map(role => "ROLE_" + role.name.toUpperCase());
 
         res.status(200).send({

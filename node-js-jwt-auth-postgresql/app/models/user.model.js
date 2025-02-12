@@ -1,4 +1,12 @@
+/**
+ * @typedef {import("sequelize").Model} Model
+ * @typedef {import("sequelize").Sequelize} Sequelize
+ */
+
 module.exports = (sequelize, Sequelize) => {
+    /**
+     * @extends {Model}
+     */
     const User = sequelize.define("users", {
         id: {
             type: Sequelize.INTEGER,

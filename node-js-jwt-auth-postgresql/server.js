@@ -3,9 +3,13 @@ const cors = require("cors");
 
 const app = express();
 
-var corsOptions = {
-    origin: "http://localhost:3000"  //"http://localhost:8081" port frontend = 3000 port backend = 8080
-};
+const corsOptions = {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+
+}
 
 app.use(cors(corsOptions));
 
