@@ -1,0 +1,136 @@
+/* define here: colors, gaps, font-names, breakpoints etc. */
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+/* colors */
+/* Theme colors */
+/* fonts and text styles */
+/* breakpoints */
+/* Components */
+/*  */
+/* Define common padding and border radius sizes and more.*/
+/* container max widths */
+/* forms */
+/* Reusable code blocks (like functions in JS) */
+/* define here: colors, gaps, font-names, breakpoints etc. */
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+/* colors */
+/* Theme colors */
+/* fonts and text styles */
+/* breakpoints */
+/* Components */
+/*  */
+/* Define common padding and border radius sizes and more.*/
+/* container max widths */
+/* forms */
+/* Styles and designs which are directly used on a button */
+/* typographic styles (headlines, font-sizes, gaps) */
+@font-face {
+  font-family: "Titilium Web";
+  src: url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2");
+  font-style: normal;
+}
+/* headlines */
+/* define here: colors, gaps, font-names, breakpoints etc. */
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+/* colors */
+/* Theme colors */
+/* fonts and text styles */
+/* breakpoints */
+/* Components */
+/*  */
+/* Define common padding and border radius sizes and more.*/
+/* container max widths */
+/* forms */
+/* Reusable code blocks (like functions in JS) */
+/* define here: colors, gaps, font-names, breakpoints etc. */
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+/* colors */
+/* Theme colors */
+/* fonts and text styles */
+/* breakpoints */
+/* Components */
+/*  */
+/* Define common padding and border radius sizes and more.*/
+/* container max widths */
+/* forms */
+/* typographic styles (headlines, font-sizes, gaps) */
+@font-face {
+  font-family: "Titilium Web";
+  src: url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2");
+  font-style: normal;
+}
+/* headlines */
+/* define here: colors, gaps, font-names, breakpoints etc. */
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+/* colors */
+/* Theme colors */
+/* fonts and text styles */
+/* breakpoints */
+/* Components */
+/*  */
+/* Define common padding and border radius sizes and more.*/
+/* container max widths */
+/* forms */
+.form-control {
+  background: rgb(174, 176, 179);
+  padding: 5rem 1rem;
+  width: 120px;
+}
+.form-control:focus {
+  width: 150px;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(240, 127, 10, 0.8) 0%, rgba(0, 119, 199, 0.6) 50%, rgba(174, 176, 179, 0.6) 100%);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.login-page .form-container {
+  background: white;
+  padding: 20px;
+  border-style: blue;
+  border-radius: 14;
+  box-shadow: grey;
+  align-items: center;
+}
+.login-page .form-control {
+  align-items: center;
+}
+
+/* Font-face definitions */
+@font-face {
+  font-family: "Titillium";
+  src: url("../../../fonts/Titillium-BoldUpright.woff") format("woff"), url("../../../fonts/Titillium-BoldUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Regular.woff") format("woff"), url("../../../fonts/Titillium-Regular.woff2") format("woff2"), url("../../../fonts/Titillium-RegularUpright.woff") format("woff"), url("../../../fonts/Titillium-RegularUpright.woff2") format("woff2"), url("../../../fonts/Titillium-Semibold.woff") format("woff"), url("../../../fonts/Titillium-Semibold.woff2") format("woff2"), url("../../../fonts/Titillium-Thin.woff") format("woff"), url("../../../fonts/Titillium-Thin.woff2") format("woff2"), url("../../../fonts/Titillium-ThinUpright.woff") format("woff"), url("../../../fonts/Titillium-ThinUpright.woff2") format("woff2");
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=main.css.map */

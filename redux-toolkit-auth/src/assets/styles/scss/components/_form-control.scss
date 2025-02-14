@@ -1,0 +1,12 @@
+@import "../abstracts/variables";
+.form-control{
+
+  background: $tertiary-color;
+  padding: $input-padding-y $input-padding-x;
+
+  width: 120px;
+
+  &:focus {
+    width: 150px;
+  }
+}

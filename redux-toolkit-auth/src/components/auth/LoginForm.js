@@ -1,6 +1,13 @@
 import React from "react";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup";
+import '../../assets/styles/main.scss'
+import SlInput from '@shoelace-style/shoelace/dist/react/input';
+import SlButton from '@shoelace-style/shoelace/dist/react/button';
+import SlAlert from '@shoelace-style/shoelace/dist/react/alert';
+
+
+
 
 
 const LoginForm = ({onSubmit, loading}) => {
@@ -20,20 +27,18 @@ const LoginForm = ({onSubmit, loading}) => {
             {({errors, touched}) =>
             <Form>
                 <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <Field name="username" type="text" className={`form-control ${errors.username && touched.username ? "is-invalid" : ""}`} />
-                    <ErrorMessage name="username" component="div" className="invalid-feedback"/>
+                    <SlInput name="username" placeholder="Username" type="text" className={`form-control ${errors.username && touched.username ? "is-invalid" : ""}`} />
+                    <SlAlert variant="primary" name="username" component="div" className="invalid-feedback"/>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <Field name="password" type="password" className={`form-control ${errors.password && touched.password ? "is-invalid" : ""}`}/>
-                    <ErrorMessage name="password" component="div" className="invalid-feedback"/>
+                    <SlInput name="password" placeholder="Password" type="password" className={`form-control ${errors.password && touched.password ? "is-invalid" : ""}`}/>
+                    <SlAlert variant="primary" name="password" component="div" className="invalid-feedback"/>
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary btn-lg btn-block" type="submit" disabled={loading}>
+                    <SlButton variant="primary" className="login-btn" type="submit" disabled={loading}>
                          {loading && (<span className="spinner-border spinner-border-sm"></span>)}
                         <span>Login</span>
-                    </button>
+                    </SlButton>
                 </div>
             </Form>
             }

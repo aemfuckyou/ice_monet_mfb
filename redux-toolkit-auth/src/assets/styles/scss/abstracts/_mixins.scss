@@ -1,0 +1,38 @@
+/* Reusable code blocks (like functions in JS) */
+@import "variables";
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container($breakpoint) {
+  max-width: map-get($container-max-widths, $breakpoint);
+  margin: 0 auto;
+}
+
+@mixin form-container($body-bg-gradient, $size, $primary-color, $radius, $form-container-box-shadow){
+  background: $body-bg-gradient;
+  padding: $size;
+  border-style: $primary-color;
+  border-radius: $radius;
+  box-shadow: $form-container-box-shadow;
+  align-items: center;
+}
+
+@mixin margin-container($size) {
+  margin: map-get($spacers, $size);
+}
+
+@mixin padding-container($size) {
+  padding: map-get($spacers, $size);
+}
+
+@mixin login-title {
+  color: $primary-color;
+  margin-bottom: 1.5rem;
+  font-family: $heading-font;
+  text-align: center;
+  background: #333333;
+}
+

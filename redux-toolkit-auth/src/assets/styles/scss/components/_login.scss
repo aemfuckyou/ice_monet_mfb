@@ -1,0 +1,19 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../base/typography";
+@import "../components/form-control";
+
+.login-page {
+  @include flex-center;
+  height: 100vh;
+  background: $body-bg-gradient;
+  .form-container {
+    @include form-container(white, 20px, blue, 14, grey);
+  }
+  @include container(md);
+  @include padding-container(3);
+  .form-control{
+    align-items: center;
+  }
+}
+
